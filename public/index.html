@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Royale Lite - Prototype</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div id="container">
+    <div id="left">
+      <div id="auth">
+        <h2>Sign in / Sign up</h2>
+        <input id="username" placeholder="username" />
+        <input id="password" placeholder="password" type="password" />
+        <div>
+          <button id="signin">Sign In</button>
+          <button id="signup">Sign Up</button>
+        </div>
+        <div id="userInfo"></div>
+      </div>
+
+      <div id="tabs">
+        <button class="tabBtn" data-tab="lobby">Lobby</button>
+        <button class="tabBtn" data-tab="battle">Battle</button>
+        <button class="tabBtn" data-tab="game">Game</button>
+      </div>
+
+      <div id="tabContents">
+        <div id="lobby" class="tab">
+          <h3>Lobby Chat</h3>
+          <div id="lobbyChat" class="chatBox"></div>
+          <input id="lobbyMsg" placeholder="Type message..." />
+          <button id="sendLobby">Send</button>
+        </div>
+
+        <div id="battle" class="tab" style="display:none">
+          <h3>Battle</h3>
+          <div id="queueStatus">Not queued</div>
+          <button id="joinQueue">Join Queue</button>
+          <h4>Match history (local)</h4>
+          <div id="matchHistory"></div>
+        </div>
+
+        <div id="game" class="tab" style="display:none">
+          <h3>Game</h3>
+          <div id="playerInfoBar"></div>
+          <div id="gameArea">
+            <canvas id="game" width="800" height="480"></canvas>
+          </div>
+          <div id="hand"></div>
+          <div>Elixir: <span id="elixir">0</span></div>
+          <div id="roomChatArea">
+            <div id="roomChat" class="chatBox"></div>
+            <input id="roomMsg" placeholder="Message..." />
+            <button id="sendRoom">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="right">
+      <h3>Instructions</h3>
+      <p>Sign in, go to Battle → Join Queue. When a match is found you'll be taken to the Game tab. Use card buttons to spawn troops (prompt chooses lane).</p>
+      <h4>Your Stats</h4>
+      <div id="stats">Wins:0 Losses:0 Crowns:0</div>
+      <h4>Notes</h4>
+      <ul>
+        <li>Prototype. Passwords are hashed with SHA256 but this is NOT production secure.</li>
+        <li>Replit recommended for quick hosting. Upload the project and run `npm install` then `npm start`.</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/client.js"></script>
+</body>
+</html>

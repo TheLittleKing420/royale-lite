@@ -1,0 +1,11 @@
+body{ margin:0; font-family: Arial, Helvetica, sans-serif; background:#0b1220; color:#e6eef8; }
+#container{ display:flex; gap:12px; padding:12px; }
+#left{ width:800px; background:#081122; padding:12px; border-radius:8px; }
+#right{ width:320px; background:#071018; padding:12px; border-radius:8px; }
+input{ padding:6px; margin:6px 0; width:100%; box-sizing:border-box; }
+button{ padding:6px 10px; margin:4px; cursor:pointer; }
+.chatBox{ background:rgba(255,255,255,0.04); height:180px; overflow:auto; padding:6px; border-radius:6px; }
+#gameArea{ background:#71c57d; padding:6px; border-radius:6px; }
+.card{ display:inline-block; padding:6px 8px; background:#fff; color:#000; margin-right:6px; border-radius:6px; cursor:pointer;}
+.tabBtn{ margin-right:6px; }
+#hand{ margin-top:8px; }
